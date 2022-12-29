@@ -4,7 +4,7 @@
 int n;
 try
 {
-Console.WriteLine("Введите любое целое число от 0 до 10: ");
+Console.WriteLine("Введите любое целое число от 0 до 100: ");
 n = Convert.ToInt32(Console.ReadLine());
 }
 catch(Exception exc)
@@ -12,12 +12,13 @@ catch(Exception exc)
     Console.WriteLine($"Ошибка ввода {exc.Message}");
     return;
 }
-double count = 1;
-while (count <= n)
+double number = n;
+while (number <= 10)
 {
+    number = number / 10;
+    number++;
+    Console.WriteLine($"{number}");
     
-    count++;
-    Console.WriteLine($"{count}");
    
 }
 
